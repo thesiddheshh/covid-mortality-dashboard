@@ -1,0 +1,16 @@
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore R-related files
+*.Rproj
+.Rhistory
+.RData
+.Ruserdata
+
+# Ignore virtual environments (if used)
+renv/
+venv/
+
+# Ignore dataset files (if too large)
+data/*.csv
