@@ -94,14 +94,8 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 
 ## 📬 Contact & Contributions  
 📩 If you have any questions or suggestions, feel free to contact me via:  
-📧 **Email**: [your-email@example.com]  
-🌐 **GitHub**: [github.com/YOUR_USERNAME](https://github.com/YOUR_USERNAME)  
+📧 **Email**: [siddhwagawad@gmail.com]  
+🌐 **GitHub**: [github.com/YOUR_USERNAME](https://github.com/thesiddheshh)  
 
 ---
-
-### ✅ Final Steps Before Submitting Your Application  
-1️⃣ Upload **screenshots** (if not already).  
-2️⃣ Double-check the **GitHub repository link** is correct.  
-3️⃣ Include this project **on your resume & master’s application!** 🚀  
-```
 
