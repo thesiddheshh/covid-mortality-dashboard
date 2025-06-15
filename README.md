@@ -1,4 +1,4 @@
-# COVID-19 Mortality Analysis
+# 🦠 COVID-19 Mortality Analysis
 
 ### Analyzing the Impact of Age and Gender on COVID-19 Mortality Rates Using Statistical Methods and Shiny Dashboards
 
