@@ -1,101 +1,142 @@
-# 🦠 COVID-19 Mortality Analysis  
+# COVID-19 Mortality Analysis
 
-### 📊 Analyzing the Impact of Age and Gender on COVID-19 Mortality Rates  
+### Analyzing the Impact of Age and Gender on COVID-19 Mortality Rates Using Statistical Methods and Shiny Dashboards
 
-## 📌 Overview  
-This project explores the relationship between **age, gender, and COVID-19 mortality rates** using **statistical analysis and data visualization**. By leveraging **Shiny for interactive dashboards**, this study aims to provide insights that can aid in **pandemic response strategies**.  
+---
 
-## 🎯 Key Features  
-✅ **Data Cleaning & Preprocessing** (Handling missing values, categorical encoding)  
-✅ **Statistical Analysis** (T-tests, Cox Regression for survival analysis)  
-✅ **Data Visualization** (Bar charts, Pie charts, Density plots, Kaplan-Meier survival curves)  
-✅ **Shiny Interactive Dashboard** (Allows users to explore the data dynamically)  
+## Overview
 
+This project investigates the relationship between **age**, **gender**, and **COVID-19 mortality rates** using statistical analysis and data visualization techniques. An interactive **Shiny dashboard** enables dynamic exploration of demographic trends and survival outcomes, providing valuable insights for public health strategies and epidemiological studies.
 
+---
 
+## Key Features
 
-## 🚀 How to Run the Project  
-### **🔹 1. Clone the Repository**  
-Open a terminal and run:  
+- **Data Cleaning & Preprocessing**
+  - Handling missing values
+  - Categorical encoding
+  - Feature engineering (age groups, date conversion)
+
+- **Statistical Analysis**
+  - T-tests to compare gender-based mortality age distributions
+  - Cox Proportional Hazards model for survival analysis
+
+- **Data Visualization**
+  - Bar charts, pie charts, and density plots
+  - Kaplan-Meier survival curves
+
+- **Shiny Dashboard**
+  - Interactive visualizations and filters for user-driven analysis
+
+---
+
+## Project Structure
+
+```
+covid19-mortality-analysis/
+│
+├── app.R                   # Shiny application entry point
+├── data/                   # Raw and preprocessed dataset files
+├── scripts/                # Data cleaning and statistical analysis scripts
+├── plots/                  # Exported visualizations
+├── README.md               # Project documentation
+└── LICENSE                 # MIT License
+```
+
+---
+
+## How to Run the Project
+
+### 1. Clone the Repository
+
 ```bash
 git clone https://github.com/YOUR_USERNAME/covid19-mortality-analysis.git
 cd covid19-mortality-analysis
 ```
 
-### **🔹 2. Install Dependencies**  
-Make sure you have **R** installed. Then install the required packages:  
+### 2. Install Required Packages
+
+Ensure you have **R** installed. Then install the necessary dependencies:
+
 ```r
 install.packages(c("shiny", "ggplot2", "dplyr", "survival", "survminer", "shinycssloaders"))
 ```
 
-### **🔹 3. Run the Shiny App**  
+### 3. Launch the Shiny App
+
 ```r
 Rscript app.R
 ```
-The application will open in your browser, displaying interactive visualizations.
 
-
-## 📊 Methodology  
-### **1️⃣ Data Preprocessing**  
-- Replaced missing values in the **age** column with the mean age.  
-- Coded missing **gender** values as `"Unknown"`.  
-- Converted **reporting_date** to Date format.  
-- Created **age groups** (`0-20`, `21-40`, etc.) for better analysis.  
-
-### **2️⃣ Statistical Analysis**  
-✔ **T-test**: Compares the mean ages of deceased males and females.  
-✔ **Cox Regression**: Evaluates the impact of age and gender on mortality risk.  
-
-### **3️⃣ Data Visualization**  
-📊 **Bar Charts** → Show mortality rates by age group and gender.  
-📊 **Pie Charts** → Visual representation of age & gender distributions.  
-📊 **Density Plots** → Age distributions compared across genders.  
-📊 **Kaplan-Meier Survival Curves** → Gender-based survival probability over time.  
+This will open a browser window with the interactive COVID-19 mortality dashboard.
 
 ---
 
-## 📚 Dataset Information  
-The dataset includes demographic and clinical details of COVID-19 cases.  
-🔗 **Source**: [Include a dataset link here if available]  
+## Methodology
 
-**Key Variables:**  
-- `age`: Numeric (Years)  
-- `gender`: Categorical (Male, Female, Unknown)  
-- `death`: Binary (1 = Yes, 0 = No)  
+### 1. Data Preprocessing
 
----
+- Imputed missing `age` values using the column mean.
+- Re-coded missing `gender` entries as `"Unknown"`.
+- Converted `reporting_date` to `Date` format.
+- Derived categorical **age groups** for stratified analysis.
 
-## 🔥 Results & Insights  
-📌 **Mortality Risk Increases with Age**  
-- Individuals **61+ years old** had the **highest** mortality rate.  
-- The **0-20 age group** had the **lowest** risk of death.  
+### 2. Statistical Analysis
 
-📌 **Gender-Based Differences Exist**  
-- **Males had a higher mortality rate** than females, aligning with global studies.  
-- Further research is needed to examine underlying health conditions.  
+- **T-Test**: Evaluated whether the mean age of deceased individuals differs between genders.
+- **Cox Proportional Hazards Model**: Assessed the impact of age and gender on mortality risk.
 
-📌 **Cox Regression Findings**  
-- **Age is a significant predictor** of mortality risk.  
-- **Gender also plays a role**, though less significant than age.  
+### 3. Data Visualization
+
+- **Bar Charts**: Show mortality distribution across age groups and gender.
+- **Pie Charts**: Display gender and age group composition.
+- **Density Plots**: Visualize age distribution by gender.
+- **Kaplan-Meier Survival Curves**: Estimate survival probabilities over time.
 
 ---
 
-## 🛠️ Technologies Used  
-- **Programming Language**: R  
-- **Libraries**: `shiny`, `ggplot2`, `dplyr`, `survival`, `survminer`, `shinycssloaders`  
-- **Framework**: Shiny (for interactive visualizations)  
+## Dataset
+
+The dataset comprises demographic and clinical attributes of confirmed COVID-19 cases.
+
+- **Source**: *[Insert dataset link if publicly available]*
+- **Key Variables**:
+  - `age`: Patient age (numeric)
+  - `gender`: Gender category (`Male`, `Female`, `Unknown`)
+  - `death`: Mortality outcome (`1` = deceased, `0` = survived)
+  - `reporting_date`: Date of case reporting
 
 ---
 
-## 📜 License  
-This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.  
+## Results and Insights
+
+- **Age is the strongest predictor** of COVID-19 mortality risk. Mortality is significantly higher in individuals aged **61+**, while those under 20 experienced minimal risk.
+- **Males exhibited a higher mortality rate** than females, consistent with broader global patterns. However, the gender effect was weaker than that of age.
+- **Survival analysis (Cox regression and Kaplan-Meier curves)** reinforces that both age and gender influence survival probability, with age having a more substantial statistical impact.
 
 ---
 
-## 📬 Contact & Contributions  
-📩 If you have any questions or suggestions, feel free to contact me via:  
-📧 **Email**: [siddhwagawad@gmail.com]  
-🌐 **GitHub**: [github.com/YOUR_USERNAME](https://github.com/thesiddheshh)  
+## Technologies Used
+
+- **Language**: R
+- **Libraries**:
+  - `shiny` – Interactive dashboard development
+  - `ggplot2`, `dplyr` – Visualization and data manipulation
+  - `survival`, `survminer` – Survival analysis
+  - `shinycssloaders` – UI enhancements
 
 ---
+
+## License
+
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for full details.
+
+---
+
+## Contact
+
+For questions, collaboration, or contributions:
+
+- **Email**: siddhwagawad@gmail.com
+- **GitHub**: [https://github.com/thesiddheshh](https://github.com/thesiddheshh)
 
